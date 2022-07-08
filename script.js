@@ -4,9 +4,9 @@ function playGame() {
 };
 
 function robotChoice() {
-    const gameArr = ['Rock', 'Paper', 'Scissors'];
-    const getRandomNumber = Math.floor(Math.random() * (gameArr.length - 0) + 0);
-    return gameArr[getRandomNumber];
+    const rpsChoice = ['Rock', 'Paper', 'Scissors'];
+    const getRandomNumber = Math.floor(Math.random() * (rpsChoice.length - 0) + 0);
+    return rpsChoice[getRandomNumber];
 };
 
 function userChoice(userChoice) {
@@ -45,7 +45,7 @@ function isWinner(gameResult) {
     result.textContent = gameResult;
 };
 
-function clearScore(e)  {
+function clearScore()  {
 
     const endGameBtn = document.querySelector('#endGameButton');
     const container  = document.querySelector('.resultContainer');
