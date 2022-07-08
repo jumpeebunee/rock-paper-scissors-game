@@ -45,7 +45,18 @@ function isWinner(gameResult) {
     result.textContent = gameResult;
 };
 
-function clearScore()  {
+function clearScore(e)  {
+
+    const endGameBtn = document.querySelector('#endGameButton');
+    const container  = document.querySelector('.resultContainer');
+    const containerChildren = container.children;
+    
+    for (let key of containerChildren) {
+        key.textContent = '';
+    };
+
+    endGameBtn.textContent = '🔴';
+
 };
 
 playGame();
